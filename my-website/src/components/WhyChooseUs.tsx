@@ -36,8 +36,8 @@ const WhyChooseUs: React.FC = () => {
     <ScrollAnimation delay={100}>
     <section className="w-full bg-white py-20 px-6 md:px-16">
       {/* Section Header */}
-      
-      <div className="text-center mb-12"><ScrollAnimation delay={200}>
+      <div className="text-center mb-12">
+        <ScrollAnimation delay={200}>
         <h4 className="text-orange-600 font-semibold uppercase tracking-widest">
           What Sets Us Apart
         </h4></ScrollAnimation>
