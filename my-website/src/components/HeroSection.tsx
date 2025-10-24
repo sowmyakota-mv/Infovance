@@ -5,14 +5,14 @@ const HeroSection: React.FC = () => {
   return (
     <ScrollAnimation delay={300}>
     <section
-      className="relative w-[100vw] h-[114vh] md:h-[92vh] -ml-[calc((100vw-100%)/2)] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 overflow-hidden mt-16 md:mt-16"
-      style={{
-        backgroundImage: 'url("/Hero BG.png")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+  className="relative w-screen min-h-screen md:h-[90vh] flex flex-col md:flex-row items-center justify-between overflow-hidden"
+  style={{
+    backgroundImage: 'url("/Hero BG.png")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
       {/* --- Left Content (Text) --- */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-4 md:space-y-6 z-10 order-first">
         {/* Tagline with Image */}

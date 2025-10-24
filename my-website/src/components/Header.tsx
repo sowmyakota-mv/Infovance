@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Linkedin, Twitter, Mail, Phone } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { Link } from "react-router-dom";
 
 interface NavItem {
   title: string;
@@ -52,7 +53,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white shadow-md">
       {/* Top Row */}
       <ScrollAnimation delay={200}>
       <div className="w-full bg-orange-200 text-orange-900 text-sm px-4 md:px-10 py-2 flex justify-between items-center">
@@ -87,8 +88,8 @@ const Header: React.FC = () => {
       {/* Main Row */}
       <ScrollAnimation delay={400}>
       <div className="w-full px-4 md:px-10 py-4 flex items-center justify-between bg-white">
-        <div className="text-2xl md:text-3xl font-bold text-orange-900">Infovance</div>
-
+        <Link to="/home"><div className="text-2xl md:text-3xl font-bold text-orange-900">Infovance</div>
+</Link>
         {/* Desktop Nav */}
         <ScrollAnimation delay={800}>
         <nav className="hidden md:flex space-x-4">

@@ -16,6 +16,8 @@ function App() {
   return (
     <>
     <Router>
+      {/* ✅ No horizontal scroll, normal vertical scroll */}
+      <div className="w-full min-h-screen overflow-x-hidden overflow-y-hidden relative">
       <ScrollToTop/>
     <Header/>
       <HeroSection/>
@@ -26,6 +28,7 @@ function App() {
       <StatsSection/>
       <ContactSection/>
       <Footer/>
+      </div>
     </Router>
     </>
   )

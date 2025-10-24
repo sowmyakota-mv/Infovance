@@ -34,7 +34,7 @@ const StatsSection: React.FC = () => {
   const gapPx = 6;
 
   return (
-    <section className="w-full bg-white py-20 px-6 md:px-16">
+    <section className="w-full bg-white py-12 px-6 md:px-16">
         
       <div className="text-center mb-12"><ScrollAnimation delay={100}>
         <h4 className="text-orange-600 font-semibold uppercase tracking-wide">

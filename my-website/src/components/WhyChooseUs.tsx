@@ -34,7 +34,7 @@ const iconColors = ["#FF6B00", "#0077B6", "#00965B", "#E91E63"];
 const WhyChooseUs: React.FC = () => {
   return (
     <ScrollAnimation delay={100}>
-    <section className="w-full bg-white py-20 px-6 md:px-16">
+    <section className="w-full bg-white py-4 px-6 md:px-12">
       {/* Section Header */}
       <div className="text-center mb-12">
         <ScrollAnimation delay={200}>

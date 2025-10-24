@@ -6,7 +6,7 @@ import ScrollAnimation from "../animation/ScrollAnimation";
 const AboutSection: React.FC = () => {
   return (
     <ScrollAnimation delay={300}>
-    <section className="w-full bg-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center gap-12">
+    <section className="w-full bg-white py-12 -mb-10 px-6 md:px-16 flex flex-col md:flex-row items-center gap-12">
       {/* --- Left Side: Image --- */}
       <div className="w-full md:w-1/2 flex justify-center">
         <img
@@ -81,7 +81,7 @@ const AboutSection: React.FC = () => {
 
     {/* Quote Icon Circle */}
     <ScrollAnimation delay={2500}>
-    <div className="absolute right-4 -bottom-6 w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center shadow-md">
+    <div className="absolute right-4 -bottom-10 w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center shadow-md">
       <Quote className="w-6 h-6 text-purple-600" />
     </div></ScrollAnimation>
   </div>
