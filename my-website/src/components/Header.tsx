@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Menu, X, Linkedin, Twitter, Mail, Phone } from "lucide-react";
-import ScrollAnimation from "../animation/ScrollAnimation";
+
 
 interface NavItem {
   title: string;

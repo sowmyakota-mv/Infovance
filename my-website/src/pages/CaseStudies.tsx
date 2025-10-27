@@ -143,7 +143,9 @@ export default function CaseStudiesPage() {
               direction={index % 2 === 0 ? "up" : "right"}
             >
               <motion.div
-                ref={(el) => (cardRefs.current[study.id] = el)}
+                ref={(el) => {
+  cardRefs.current[study.id] = el;
+}}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
