@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
@@ -10,6 +10,9 @@ import StatsSection from './components/StatsSection'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 import ScrollToTop from './animation/ScrollToTop'
+import Innovation from './components/Innovation'
+import CaseStudiesPage from './pages/CaseStudies'
+import InnovationLab from './pages/DiscoverMore'
 
 function App() {
 
@@ -20,6 +23,9 @@ function App() {
       <div className="w-full min-h-screen overflow-x-hidden overflow-y-hidden relative">
       <ScrollToTop/>
     <Header/>
+     <Routes>
+        <Route path="/" element={
+          <div>
       <HeroSection/>
       <AboutSection/>
       <ServicesSection/>
@@ -27,10 +33,15 @@ function App() {
       <Testimonials/>
       <StatsSection/>
       <ContactSection/>
+      </div>}/>
+      <Route path='/innovation' element={<Innovation/>}/>
+      <Route path='/innovation/case-studies' element={<CaseStudiesPage/>}/>
+      <Route path='/innovation-lab' element={<InnovationLab/>}/>
+      </Routes>
       <Footer/>
       </div>
     </Router>
-    </>
+    </> 
   )
 }
 

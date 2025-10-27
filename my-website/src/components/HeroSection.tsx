@@ -5,7 +5,7 @@ const HeroSection: React.FC = () => {
   return (
     <ScrollAnimation delay={300}>
     <section
-  className="relative w-screen h-[560px] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 overflow-hidden mt-0"
+  className="relative w-screen md:h-[560px] h-[590px]  flex flex-col md:flex-row items-center justify-between px-6 md:px-16 overflow-hidden mt-24"
   style={{
     backgroundImage: 'url("/Hero BG.png")',
     backgroundSize: "cover",

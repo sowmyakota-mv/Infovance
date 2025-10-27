@@ -4,13 +4,13 @@ import ScrollAnimation from "../animation/ScrollAnimation";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-[#0B1E39] text-white m-0 p-0">
+    <footer className="w-full bg-[#0B1E39] text-white m-0 p-0 -mb-10">
     <div className="w-full py-12 space-y-8">
         
         {/* ---------------- ROW 1: COMPANY INFO ---------------- */}
         <ScrollAnimation delay={200}>
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left">
-            <h2 className="text-5xl font-bold tracking-wide mb-2 md:mb-0">
+            <h2 className="text-5xl font-bold tracking-wide mb-2 md:mb-0 ml-16">
               Infovance
             </h2>
             <p className="text-gray-300 text-lg leading-snug max-w-4xl">
@@ -66,26 +66,26 @@ const Footer: React.FC = () => {
 
         {/* ---------------- ROW 3: COPYRIGHT BAR ---------------- */}
         <ScrollAnimation delay={700}>
-          <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm gap-4 w-full">
-            
-            <div className="text-center md:text-left w-full md:w-1/3">
-              © 2025 Infovance. All Rights Reserved.
-            </div>
-
-            <div className="flex justify-center w-full md:w-1/3 space-x-4">
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-              <span>|</span>
-              <a href="/terms" className="hover:text-white transition-colors">Terms of Use</a>
-              <span>|</span>
-              <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
-            </div>
-
-            <div className="flex justify-center md:justify-end w-full md:w-1/3 space-x-4">
-              <a href="#"><Twitter className="w-5 h-5 text-blue-300 hover:text-blue-500 transition-colors" /></a>
-              <a href="#"><Linkedin className="w-5 h-5 text-blue-300 hover:text-blue-500 transition-colors" /></a>
-              <a href="#"><Facebook className="w-5 h-5 text-blue-300 hover:text-blue-600 transition-colors" /></a>
-            </div>
-          </div>
+          <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm gap-y-2 gap-x-12 w-full">
+  {/* Copyright */}
+  <div className="text-center md:text-left w-full md:w-1/3 md:pl-8">
+    © 2025 Infovance. All Rights Reserved.
+  </div>
+  {/* Policy Links */}
+  <div className="flex justify-center w-full md:w-1/3 space-x-4">
+    <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+    <span>|</span>
+    <a href="/terms" className="hover:text-white transition-colors">Terms of Use</a>
+    <span>|</span>
+    <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
+  </div>
+  {/* Social Icons */}
+  <div className="flex justify-center md:justify-end w-full md:w-1/3 space-x-4 md:pr-8">
+    <a href="#"><Twitter className="w-5 h-5 text-blue-300 hover:text-blue-500 transition-colors" /></a>
+    <a href="#"><Linkedin className="w-5 h-5 text-blue-300 hover:text-blue-500 transition-colors" /></a>
+    <a href="#"><Facebook className="w-5 h-5 text-blue-300 hover:text-blue-600 transition-colors" /></a>
+  </div>
+</div>
         </ScrollAnimation>
       </div>
     </footer>

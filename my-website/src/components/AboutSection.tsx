@@ -2,8 +2,10 @@
 import React from "react";
 import { ArrowRight, Cloud, Quote, Zap } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { useNavigate } from "react-router-dom";
 
 const AboutSection: React.FC = () => {
+  const navigate=useNavigate()
   return (
     <ScrollAnimation delay={300}>
     <section className="w-full bg-white py-12 -mb-10 px-6 md:px-16 flex flex-col md:flex-row items-center gap-12">
@@ -90,7 +92,7 @@ const AboutSection: React.FC = () => {
 
         {/* --- Curved Rectangular Box: Learn More --- */}
         <ScrollAnimation delay={2700}>
-        <div className="w-full md:w-1/2 bg-orange-500 text-white rounded-2xl px-6 py-4 flex items-center justify-between hover:bg-orange-600 transition-all duration-300 cursor-pointer shadow-md">
+        <div onClick={()=>navigate("/innovation")} className="w-[250px] md:w-1/2 bg-orange-500 text-white rounded-2xl px-6 py-4 flex items-center justify-between hover:bg-orange-600 transition-all duration-300 cursor-pointer shadow-md">
           <ScrollAnimation delay={2900}><span className="font-semibold text-lg">Learn More About Us</span>
          </ScrollAnimation>
          <ScrollAnimation delay={3100}> <ArrowRight className="w-6 h-6" /></ScrollAnimation>
