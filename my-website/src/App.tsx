@@ -13,6 +13,7 @@ import ScrollToTop from './animation/ScrollToTop'
 import Innovation from './components/Innovation'
 import CaseStudiesPage from './pages/CaseStudies'
 import InnovationLab from './pages/DiscoverMore'
+import Solutions from './pages/Solutions'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Route path='/innovation' element={<Innovation/>}/>
       <Route path='/innovation/case-studies' element={<CaseStudiesPage/>}/>
       <Route path='/innovation-lab' element={<InnovationLab/>}/>
+      <Route path='/solutions' element={<Solutions/>}/>
       </Routes>
       <Footer/>
       </div>

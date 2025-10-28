@@ -37,7 +37,7 @@ const ContactSection: React.FC = () => {
               style={{ color: "#112F55" }}
             >
               We’re here to turn your digital vision into a powerful reality.
-              Share your goals with us — our team will help craft solutions that
+              Share your goals with us - our team will help craft solutions that
               inspire innovation, growth, and long-term success.
             </p></ScrollAnimation>
 

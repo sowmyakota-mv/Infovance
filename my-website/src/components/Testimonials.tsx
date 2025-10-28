@@ -20,7 +20,7 @@ const testimonials = [
     name: "Emma Williams",
     role: "Founder, Vision Marketing",
     feedback:
-      "Professional, proactive, and reliable — Infovance delivered beyond expectations. I highly recommend them for digital transformation initiatives.",
+      "Professional, proactive, and reliable Infovance delivered beyond expectations. I highly recommend them for digital transformation initiatives.",
   },
 ];
 

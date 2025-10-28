@@ -14,9 +14,14 @@ const Footer: React.FC = () => {
               Infovance
             </h2>
             <p className="text-gray-300 text-lg leading-snug max-w-4xl">
-              Empowering businesses through innovation, strategy, and technology — delivering
+              Empowering businesses through innovation, strategy, and technology delivering
               transformative digital experiences that inspire growth and long-term impact
-              worldwide.
+              worldwide.{" "}
+            <a
+              className="text-blue-300 hover:text-white font-semibold"
+            >
+              Know More →
+            </a>
             </p>
           </div>
         </ScrollAnimation>

@@ -6,7 +6,7 @@ import ScrollAnimation from "../animation/ScrollAnimation";
 const services = [
   {
     title: "Cloud Infrastructure & Scalability",
-    desc: "Build adaptive, high-performance cloud ecosystems that evolve seamlessly with your business demands. Our team architects cloud-native solutions that are optimized for cost, performance, and resilience — helping you scale effortlessly while maintaining top-tier security and reliability.",
+    desc: "Build adaptive, high-performance cloud ecosystems that evolve seamlessly with your business demands. Our team architects cloud-native solutions that are optimized for cost, performance, and resilience helping you scale effortlessly while maintaining top-tier security and reliability.",
   },
   {
     title: "AI-Powered Transformation",
