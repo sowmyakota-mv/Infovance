@@ -92,7 +92,7 @@ const AboutSection: React.FC = () => {
 
         {/* --- Curved Rectangular Box: Learn More --- */}
         <ScrollAnimation delay={2700}>
-        <div onClick={()=>navigate("/innovation")} className="w-[250px] md:w-1/2 bg-orange-500 text-white rounded-2xl px-6 py-4 flex items-center justify-between hover:bg-orange-600 transition-all duration-300 cursor-pointer shadow-md">
+        <div onClick={()=>navigate("/about-infovance")} className="w-[250px] md:w-1/2 bg-orange-500 text-white rounded-2xl px-6 py-4 flex items-center justify-between hover:bg-orange-600 transition-all duration-300 cursor-pointer shadow-md">
           <ScrollAnimation delay={2900}><span className="font-semibold text-lg">Learn More About Us</span>
          </ScrollAnimation>
          <ScrollAnimation delay={3100}> <ArrowRight className="w-6 h-6" /></ScrollAnimation>

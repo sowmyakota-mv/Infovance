@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
+import { useNavigate } from "react-router-dom";
 
 const caseStudies = [
   {
@@ -64,6 +65,7 @@ export default function CaseStudiesPage() {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [highlightedId, setHighlightedId] = useState<number | null>(null);
   const cardRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
+  const navigate=useNavigate()
 
   const filters = ["All", "AI", "Analytics", "Cloud", "Sustainability", "IoT"];
 
@@ -286,7 +288,7 @@ export default function CaseStudiesPage() {
             Let’s collaborate to turn your bold ideas into real-world
             transformation with AI, design, and data-driven strategy.
           </p>
-          <button className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold flex items-center mx-auto gap-2">
+          <button onClick={()=>navigate("/connect")} className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold flex items-center mx-auto gap-2">
             Get Started <ChevronRight className="w-4 h-4" />
           </button>
         </ScrollAnimation>

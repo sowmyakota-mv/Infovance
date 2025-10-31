@@ -47,7 +47,7 @@ const WhyChooseUs: React.FC = () => {
         </h2></ScrollAnimation>
         <ScrollAnimation delay={400}>
         <p className="text-gray-700 mt-4 max-w-4xl mx-auto text-lg">
-          At <span className="font-semibold text-orange-600">Infovance</span>, we don’t just deliver technology — we create impactful solutions. Discover why leading businesses trust <span className="font-semibold text-orange-600">Infovance</span> to accelerate innovation, streamline operations, and transform their digital journeys.
+          At <span className="font-semibold text-orange-600">Infovance</span>, we don’t just deliver technology - we create impactful solutions. Discover why leading businesses trust <span className="font-semibold text-orange-600">Infovance</span> to accelerate innovation, streamline operations, and transform their digital journeys.
         </p></ScrollAnimation>
       </div>
 

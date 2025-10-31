@@ -7,7 +7,7 @@ export default function InnovationLab() {
   const navigate=useNavigate()
 
   return (
-    <div id="/innovation-lab" className="overflow-hidden text-gray-900 mt-24">
+    <div id="/innovation-lab" className="overflow-hidden text-gray-900">
       {/* ===== HERO SECTION ===== */}
       <section
         ref={heroRef}
@@ -79,7 +79,7 @@ export default function InnovationLab() {
           </h2>
           <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-16">
             Beyond research and prototypes, our innovation ecosystem is divided
-            into specialized zones—each designed to explore future possibilities
+            into specialized zones each designed to explore future possibilities
             and enable collaboration across technology, design, and sustainability.
           </p>
         </ScrollAnimation>
@@ -93,7 +93,7 @@ export default function InnovationLab() {
             },
             {
               title: "Human-Centered Design Studio",
-              desc: "Where creativity meets empathy — our designers craft experiences, interfaces, and journeys that redefine how people interact with technology.",
+              desc: "Where creativity meets empathy  our designers craft experiences, interfaces, and journeys that redefine how people interact with technology.",
               image: "/studio.jpg",
             },
             {
@@ -140,7 +140,7 @@ export default function InnovationLab() {
             Partner with us, collaborate, and be part of our journey to redefine
             innovation. Together, we turn ideas into reality.
           </p>
-          <button onClick={()=>navigate("/register")} className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 text-white font-semibold hover:scale-105 transition-transform shadow-lg">
+          <button onClick={()=>navigate("/connect")} className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 text-white font-semibold hover:scale-105 transition-transform shadow-lg">
             Collaborate With Us
           </button>
         </ScrollAnimation>

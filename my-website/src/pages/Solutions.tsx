@@ -115,13 +115,13 @@ const Solutions: React.FC = () => {
   ];
     const navigate=useNavigate()
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white mt-16">
       {/* ===== 1️⃣ HERO SECTION ===== */}
-      <section className="relative w-full h-[70vh] flex items-center overflow-hidden">
+      <section className="relative w-full md:h-[70vh] flex items-center overflow-hidden">
   {/* Background Video */}
   <video
     className="absolute top-0 left-0 w-full h-full object-cover"
-    src="/solutions-hero1.mp4"
+    src="/solutions-hero.mp4"
     autoPlay
     loop
     muted
@@ -129,11 +129,11 @@ const Solutions: React.FC = () => {
   />
 
   {/* Overlay */}
-  <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+  <div className="absolute inset-0 bg-black bg-opacity-0"></div>
 
   {/* Foreground Text (aligned right) */}
   <div className="relative z-10 w-full flex justify-end items-center h-full px-10 md:px-20 mt-12">
-    <div className="w-[60%] text-center text-white">
+    <div className="w-full md:w-[60%] text-center text-white">
       <ScrollAnimation delay={200}>
         <h1 className="text-5xl md:text-5xl font-extrabold mb-6 leading-tight">
           Transforming Challenges into Scalable Solutions
@@ -175,9 +175,9 @@ const Solutions: React.FC = () => {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   {solution.desc}
                 </p>
-                <button className="flex items-center gap-2 text-orange-600 font-semibold border border-orange-600 px-5 py-2 rounded-full hover:bg-orange-600 hover:text-white transition-all duration-300">
+                {/* <button className="flex items-center gap-2 text-orange-600 font-semibold border border-orange-600 px-5 py-2 rounded-full hover:bg-orange-600 hover:text-white transition-all duration-300">
                   Learn More <ArrowRight className="w-5 h-5" />
-                </button>
+                </button> */}
               </div>
             </ScrollAnimation>
           ))}
@@ -281,7 +281,7 @@ const Solutions: React.FC = () => {
   </div>
 </section>
 
-      <section className="relative w-full py-20 px-6 md:px-16 bg-gradient-to-br from-orange-50 via-white to-orange-100 overflow-hidden">
+      <section className="relative w-full py-10 px-6 md:px-16 bg-gradient-to-br from-orange-50 via-white to-orange-100 overflow-hidden">
   {/* Header */}
   <div className="text-center relative z-10 max-w-4xl mx-auto">
     <ScrollAnimation delay={200}>
@@ -456,7 +456,7 @@ const Solutions: React.FC = () => {
         </ScrollAnimation>
         <ScrollAnimation delay={600}>
           <p className="text-gray-700 text-lg md:text-xl mt-4 max-w-3xl mx-auto leading-relaxed">
-            We drive digital excellence across global industries — combining{" "}
+            We drive digital excellence across global industries combining{" "}
             <span className="text-orange-700 font-semibold">data, cloud, and intelligence</span>{" "}
             to accelerate transformation.
           </p>
@@ -507,7 +507,7 @@ const Solutions: React.FC = () => {
     </section>
 
       {/* ===== 7️⃣ CTA SECTION ===== */}
-      <section className="w-full py-20 px-6 md:px-16 bg-orange-300 text-black text-center">
+      <section className="w-full py-16 px-6 md:px-16 bg-orange-300 text-black text-center">
         <ScrollAnimation delay={200}>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Let’s Build the Future - Together
@@ -520,7 +520,7 @@ const Solutions: React.FC = () => {
           </p>
         </ScrollAnimation>
         <ScrollAnimation delay={600}>
-          <button className="bg-white text-orange-700 font-semibold py-3 px-8 rounded-full shadow-md hover:bg-orange-100 transition-all duration-300">
+          <button onClick={()=>navigate("/connect")} className="bg-white text-orange-700 font-semibold py-3 px-8 rounded-full shadow-md hover:bg-orange-100 transition-all duration-300">
             Start a Conversation
           </button>
         </ScrollAnimation>

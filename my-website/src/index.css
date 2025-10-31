@@ -12,3 +12,19 @@ html, body, #root {
   overflow-x: hidden;
 }
 
+.react-tel-input {
+  position: relative !important;
+  z-index: 50 !important;
+}
+
+.react-tel-input .country-list {
+  position: fixed !important; /* ⬅️ not absolute */
+  top: auto !important;
+  left: auto !important;
+  z-index: 99999 !important;
+  background-color: white !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}

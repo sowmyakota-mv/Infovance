@@ -61,14 +61,14 @@ export default function InnovationHero() {
       {/* ========== HERO SECTION WITH LETTER-BY-LETTER ENTER ANIMATION ========== */}
       <section
         ref={sectionRef}
-        className="relative w-screen h-80 flex items-center justify-center text-center mt-28"
+        className="relative w-screen h-80 flex items-center justify-center text-center mt-16"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/innovation-hero.png")`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("/innovation.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <ScrollAnimation delay={200}>
+        {/* <ScrollAnimation delay={200}>
           <h1
             className="text-7xl md:text-9xl font-extrabold text-white tracking-wider flex flex-wrap justify-center"
             style={{ fontFamily: "'PT Serif', serif" }}
@@ -86,7 +86,7 @@ export default function InnovationHero() {
               </span>
             ))}
           </h1>
-        </ScrollAnimation>
+        </ScrollAnimation> */}
       </section>
 
       {/* ========== INNOVATION HERO WITH WHITE BACKGROUND AND TWO-LINE TITLE ========== */}
@@ -225,7 +225,7 @@ export default function InnovationHero() {
       </section>
 
       {/* ========== R&D AND FUTURE VISION (Modern – Image Left + Content Right) ========== */}
-      <section className="py-8 px-6 md:px-12 relative flex flex-col-reverse md:flex-row items-center gap-20 overflow-hidden ml-20">
+      <section className="py-8 px-6 md:px-12 relative flex flex-col-reverse md:flex-row items-center gap-20 overflow-hidden md:ml-20">
         <div className="absolute inset-0 bg-gradient-to-tr from-white via-blue-50 to-transparent opacity-70 blur-3xl"></div>
 
         <ScrollAnimation delay={200}>
@@ -288,7 +288,7 @@ export default function InnovationHero() {
             Transform ideas into impactful solutions with cutting-edge technology, AI-driven insights, 
             and sustainable digital strategies. Join the forefront of tomorrow’s innovation today.
           </p>
-          <button className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 text-white font-semibold hover:scale-105 transform transition-all shadow-lg">
+          <button onClick={()=>navigate("/connect")} className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 text-white font-semibold hover:scale-105 transform transition-all shadow-lg">
             Get Started Now
           </button>
         </ScrollAnimation>

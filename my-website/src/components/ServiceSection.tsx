@@ -34,7 +34,7 @@ const ServicesSection: React.FC = () => {
         <ScrollAnimation delay={500}>
         <p className="text-gray-700 mt-4 max-w-2xl mx-auto text-lg">
           We craft future-ready solutions that merge design, technology, and
-          strategy—empowering organizations to lead with innovation and agility.
+          strategy empowering organizations to lead with innovation and agility.
         </p></ScrollAnimation>
       </div>
 
@@ -58,13 +58,13 @@ const ServicesSection: React.FC = () => {
             </div>
 
             {/* Centered Rounded Button */}
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
                 <ScrollAnimation delay={1300}>
               <button className="flex items-center gap-2 text-orange-600 border border-orange-600 px-5 py-2 rounded-full font-semibold hover:bg-orange-600 hover:text-white transition-all duration-300">
                 Learn More
                 <ArrowRight className="w-5 h-5" />
               </button></ScrollAnimation>
-            </div>
+            </div> */}
 
             {/* Bottom Rectangular Box */}
             <div className="absolute bottom-0 left-0 w-full h-2 bg-orange-500 rounded-b-[5px]" />

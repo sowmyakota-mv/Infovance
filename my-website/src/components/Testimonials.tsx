@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
         </h2></ScrollAnimation>
         <ScrollAnimation delay={500}>
         <p className="text-gray-700 mt-4 max-w-2xl mx-auto text-lg">
-          Hear from the clients who’ve trusted <span className="font-semibold text-orange-600">Infovance</span> to lead their digital transformation journey — and experienced measurable success.
+          Hear from the clients who’ve trusted <span className="font-semibold text-orange-600">Infovance</span> to lead their digital transformation journey  and experienced measurable success.
         </p></ScrollAnimation>
       </div>
 
