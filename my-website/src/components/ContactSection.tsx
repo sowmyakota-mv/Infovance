@@ -99,7 +99,7 @@ const ContactSection: React.FC = () => {
   return (
     <section className="w-full bg-white py-20 px-6 md:px-16 relative">
       {/* ✅ CSS FIX for phone dropdown */}
-      <style jsx global>{`
+      <style>{`
         .react-tel-input {
           position: relative !important;
           z-index: 50 !important;

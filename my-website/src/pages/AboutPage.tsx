@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { Lightbulb, Target, Users, Rocket } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 

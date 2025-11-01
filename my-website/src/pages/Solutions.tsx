@@ -10,7 +10,6 @@ import {
   Factory,
   HeartPulse,
   ShoppingBag,
-  ArrowRight,
   Layout,
   Laptop,
   GraduationCap,

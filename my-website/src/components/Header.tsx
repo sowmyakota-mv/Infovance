@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import { Menu, X, Linkedin, Twitter, Mail, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 interface NavItem {
   title: string;
@@ -30,7 +30,7 @@ const navLinks: NavItem[] = [
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [trainingOpen, setTrainingOpen] = useState(false);
+  const [trainingOpen, setTrainingOpen] = useState<string | null>(null);
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("home");
   const navigate=useNavigate()

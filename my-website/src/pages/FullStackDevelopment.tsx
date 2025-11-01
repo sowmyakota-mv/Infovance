@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Layers, Database, MonitorSmartphone, Rocket, Users } from "lucide-react";
+import { Layers, Rocket, Users } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { useEffect, useRef, useState } from "react";
 import { FaAws, FaCss3Alt, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";

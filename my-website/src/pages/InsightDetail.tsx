@@ -165,29 +165,28 @@ export default function InsightsDetails() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const id = Number(params.get("id"));
-
-  const sectionRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
+const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
   useEffect(() => {
   if (id && sectionRefs.current[id]) {
-    // First, scroll into view
-    sectionRefs.current[id]?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    const el = sectionRefs.current[id];
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    // Then, apply a small offset adjustment after the scroll
-    setTimeout(() => {
-      const yOffset = -120; // adjust depending on your hero height or navbar
-      const elementTop = sectionRefs.current[id]?.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: elementTop + yOffset, behavior: "smooth" });
-    }, 500); // slight delay ensures scrollIntoView completes first
+      setTimeout(() => {
+        const yOffset = -120;
+        const rect = el.getBoundingClientRect();
+        const elementTop = rect.top + window.scrollY;
+        window.scrollTo({ top: elementTop + yOffset, behavior: "smooth" });
+      }, 500);
+    }
   }
 }, [id]);
 
 
+
   // Convert markdown-like bold (**) text into <span className="font-semibold">
-  const renderFormattedText = (text) => {
+  const renderFormattedText = (text: string) => {
     const formatted = text.replace(
       /\*\*(.*?)\*\*/g,
       '<span class="font-semibold text-gray-900">$1</span>'
@@ -223,7 +222,9 @@ export default function InsightsDetails() {
         {insightsData.map((item, index) => (
           <motion.section
             key={item.id}
-            ref={(el) => (sectionRefs.current[item.id] = el)}
+           ref={(el) => {
+  sectionRefs.current[item.id] = el;
+}}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

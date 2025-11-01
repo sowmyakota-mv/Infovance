@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
 import {
-  Rocket,
   UserCheck,
   Briefcase,
   Target,
   Lightbulb,
   Users,
-  Building2,
   BarChart,
   Award,
 } from "lucide-react";

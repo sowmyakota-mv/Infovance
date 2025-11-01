@@ -1,6 +1,5 @@
 // src/components/ServicesSection.tsx
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 
 const services = [
