@@ -4,10 +4,8 @@ import {
   Palette,
   Monitor,
   Layers,
-  Figma,
   Sparkles,
   Workflow,
-  ArrowRight,
   Lightbulb
 } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";

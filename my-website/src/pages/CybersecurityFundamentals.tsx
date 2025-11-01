@@ -6,9 +6,7 @@ import {
   Key,
   Monitor,
   Network,
-  Database,
   Bug,
-  ArrowRight
 } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { useEffect, useRef, useState } from "react";

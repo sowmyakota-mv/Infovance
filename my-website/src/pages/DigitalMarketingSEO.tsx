@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart3, Globe, Layers, Megaphone, Search, TrendingUp } from "lucide-react";
+import { BarChart3, Globe, Layers, Megaphone, Search, TrendingUp } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";

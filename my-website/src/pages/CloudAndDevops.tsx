@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Cloud, Server, Cpu, Network, Database, ShieldCheck, Settings } from "lucide-react";
+import { Cloud, Server, Cpu, Network, Database, ShieldCheck} from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
