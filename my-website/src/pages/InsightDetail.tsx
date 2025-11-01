@@ -255,20 +255,21 @@ const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
               </p>
 
               {/* Clean List - no dots, icons only */}
-              <ul className="space-y-2 text-gray-700 leading-relaxed">
+              <ul className="space-y-4 text-gray-700 leading-relaxed">
   {item.details.points.map((point, idx) => {
     const [title, desc] = point.split("—");
     return (
-      <li key={idx} className="flex items-baseline gap-2">
-        <span
-          className="font-semibold text-gray-900 text-lg md:text-xl whitespace-nowrap"
+      <li key={idx} className="text-left">
+        {/* Title */}
+        <div
+          className="font-semibold text-gray-900 text-lg md:text-xl mb-1"
           dangerouslySetInnerHTML={{
-            __html: renderFormattedText(title.trim() + ":"),
+            __html: renderFormattedText(title.trim()),
           }}
         />
-        <span
-          className="text-gray-700 text-base"
-          style={{ marginLeft: "0.4rem" }}
+        {/* Description below */}
+        <div
+          className="text-gray-700 text-base pl-6"
           dangerouslySetInnerHTML={{
             __html: renderFormattedText(desc?.trim() || ""),
           }}

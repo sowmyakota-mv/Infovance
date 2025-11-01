@@ -114,12 +114,12 @@ export default function UXUIDesignMasterclass() {
             >
               Apply Now
             </button>
-            <a
+            {/* <a
               href="#curriculum"
               className="inline-flex items-center gap-2 border border-purple-600 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-600 hover:text-white transition"
             >
               View Curriculum <ArrowRight className="w-4 h-4" />
-            </a>
+            </a> */}
           </div>
         </ScrollAnimation>
       </div>

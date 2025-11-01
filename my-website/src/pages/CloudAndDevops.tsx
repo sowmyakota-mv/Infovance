@@ -54,7 +54,7 @@ export default function CloudAndDevops() {
             className="text-4xl md:text-7xl font-extrabold text-white mb-6 tracking-wide flex flex-wrap justify-center"
             style={{ fontFamily: "'PT Serif', serif" }}
           >
-            {"Cloud Computing and DevOps".split("").map((letter, i) => (
+            {"Cloud Computing & DevOps".split("").map((letter, i) => (
               <span
                 key={i}
                 className="inline-block opacity-0"

@@ -103,7 +103,7 @@ export default function CybersecurityFundamentals() {
 
         <ScrollAnimation delay={400}>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Learn core cybersecurity concepts and hands-on defensive skills — secure networks,
+            Learn core cybersecurity concepts and hands-on defensive skills  secure networks,
             harden systems, defend applications, and respond to incidents using real-world labs.
           </p>
         </ScrollAnimation>

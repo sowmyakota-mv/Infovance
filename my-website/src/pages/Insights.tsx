@@ -42,7 +42,7 @@ const insightsData = [
     category: "Technology & Innovation",
     image: "/ai-powered.jpg",
     description:
-      "AI is reshaping education and corporate training — here’s how adaptive learning platforms are leading the change.",
+      "AI is reshaping education and corporate training  here’s how adaptive learning platforms are leading the change.",
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const insightsData = [
     category: "Corporate Success Stories",
     image: "/human.jpg",
     description:
-      "Digital success isn’t just about technology — it’s about people. Learn how empathy and collaboration fuel transformation.",
+      "Digital success isn’t just about technology  it’s about people. Learn how empathy and collaboration fuel transformation.",
   },
   {
     id: 9,

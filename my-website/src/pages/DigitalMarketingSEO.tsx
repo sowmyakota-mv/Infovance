@@ -277,7 +277,7 @@ export default function DigitalMarketingSEO() {
           {[
             {
               title: "Hands-on Campaigns",
-              desc: "Practical projects — run live SEO & paid campaigns with mentor feedback."
+              desc: "Practical projects  run live SEO & paid campaigns with mentor feedback."
             },
             {
               title: "Tools & Playbooks",
@@ -353,7 +353,7 @@ export default function DigitalMarketingSEO() {
 
         <ScrollAnimation delay={400}>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
-            Join the Digital Marketing & SEO Mastery program — learn the strategies and tools to deliver measurable results.
+            Join the Digital Marketing & SEO Mastery program  learn the strategies and tools to deliver measurable results.
           </p>
         </ScrollAnimation>
 

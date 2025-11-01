@@ -78,7 +78,7 @@ export default function AiAndMl() {
         </ScrollAnimation>
         <ScrollAnimation delay={400}>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Master the future of intelligent systems — learn to build AI models,
+            Master the future of intelligent systems  learn to build AI models,
             design predictive algorithms, and automate decision-making with
             data-driven solutions.
           </p>

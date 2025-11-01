@@ -252,7 +252,7 @@ const Solutions: React.FC = () => {
 
       {/* 📊 Animated Metrics */}
       <ScrollAnimation delay={700}>
-        <div className="grid grid-cols-3 gap-6 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div>
             <h3 className="text-4xl font-bold text-orange-600">+50%</h3>
             <p className="text-gray-700 text-sm">Efficiency Boost</p>
@@ -262,7 +262,7 @@ const Solutions: React.FC = () => {
             <p className="text-gray-700 text-sm">Downtime Reduced</p>
           </div>
           <div>
-            <h3 className="text-4xl font-bold text-orange-600">6 Mo</h3>
+            <h3 className="text-4xl font-bold text-orange-600">6 Months</h3>
             <p className="text-gray-700 text-sm">Implementation Time</p>
           </div>
         </div>
