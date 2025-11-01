@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function AiAndMl() {
     const sectionRef = useRef<HTMLDivElement>(null);
-      const [animate, setAnimate] = useState(false);
+      const [_, setAnimate] = useState(false);
       const navigate=useNavigate()
 
      useEffect(() => {

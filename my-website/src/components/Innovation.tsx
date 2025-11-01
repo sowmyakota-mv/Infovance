@@ -33,7 +33,7 @@ const technologies = [
 
 export default function InnovationHero() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [animate, setAnimate] = useState(false);
+  const [_, setAnimate] = useState(false);
   const [offset, setOffset] = useState(0);
   const navigate = useNavigate();
 

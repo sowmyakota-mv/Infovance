@@ -223,7 +223,7 @@ const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
           <motion.section
             key={item.id}
            ref={(el) => {
-  sectionRefs.current[item.id] = el;
+  sectionRefs.current[item.id] = el as HTMLDivElement | null;
 }}
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -21,7 +21,7 @@ const ContactSection: React.FC = () => {
     });
   
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [animate, setAnimate] = useState(false);
+    const [_, setAnimate] = useState(false);
     const sectionRef = useRef<HTMLDivElement>(null);
 
     const companyPhoneCode=+44

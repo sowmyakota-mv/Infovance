@@ -42,7 +42,7 @@ export default function CorporateUpskilling() {
         {/* ===== HERO SECTION ===== */}
       <div
         ref={sectionRef}
-        className="relative w-full h-[70vh] flex flex-col justify-center items-center text-center overflow-hidden"
+        className="relative w-full h-[80vh] flex flex-col justify-center items-center text-center overflow-hidden"
       >
         {/* 🎥 Background Video */}
         <video
