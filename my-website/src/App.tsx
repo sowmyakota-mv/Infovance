@@ -25,6 +25,10 @@ import Insights from './pages/Insights'
 import Connect from './components/Connect'
 import About from './pages/AboutPage'
 import InsightsDetails from './pages/InsightDetail'
+import CloudAndDevops from './pages/CloudAndDevops'
+import CybersecurityFundamentals from './pages/CybersecurityFundamentals'
+import UXUIDesignMasterclass from './pages/UXUXDesignMasterClass'
+import DigitalMarketingSEO from './pages/DigitalMarketingSEO'
 
 function App() {
 
@@ -61,6 +65,10 @@ function App() {
       <Route path='/connect' element={<Connect/>}/>
       <Route path='/about-infovance' element={<About/>}/>
       <Route path='/insights-details' element={<InsightsDetails/>}/>
+      <Route path='/trainings/cloud-devops' element={<CloudAndDevops/>}/>\
+      <Route path='/trainings/cybersecurity' element={<CybersecurityFundamentals/>}/>
+      <Route path='/trainings/ui-ux' element={<UXUIDesignMasterclass/>}/>
+      <Route path='/trainings/digital-marketing' element={<DigitalMarketingSEO/>}/>
       </Routes>
       <Footer/>
       </div>

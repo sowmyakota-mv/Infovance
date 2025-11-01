@@ -1,6 +1,6 @@
 // src/sections/Trainings.tsx
 import { motion } from "framer-motion";
-import { GraduationCap, Cpu, BarChart3, Briefcase, Code, Users, ArrowRight } from "lucide-react";
+import { GraduationCap, Cpu, BarChart3, Briefcase, Code, Users, ArrowRight, Cloud, Shield, PenTool, Globe } from "lucide-react";
 import ScrollAnimation from "../animation/ScrollAnimation";
 import { Link } from "react-router-dom";
 
@@ -34,6 +34,34 @@ export default function Trainings() {
       desc: "Customized programs designed to equip professionals with leadership, communication, and tech fluency.",
       bg: "bg-orange-100",
       url:"/trainings/corporate-upskilling"
+    },
+    {
+      icon: <Cloud className="w-10 h-10 text-orange-500" />,
+      title: "Cloud Computing & DevOps",
+      desc: "Learn to deploy, manage, and scale cloud-based systems while mastering DevOps tools and workflows.",
+      bg: "bg-orange-50",
+      url: "/trainings/cloud-devops",
+    },
+    {
+      icon: <Shield className="w-10 h-10 text-orange-500" />,
+      title: "Cybersecurity Fundamentals",
+      desc: "Understand the core principles of cybersecurity and protect systems from modern digital threats.",
+      bg: "bg-orange-100",
+      url: "/trainings/cybersecurity",
+    },
+    {
+      icon: <PenTool className="w-10 h-10 text-orange-500" />,
+      title: "UI/UX Design Masterclass",
+      desc: "Design intuitive, beautiful, and user-friendly interfaces using modern design principles and tools.",
+      bg: "bg-orange-50",
+      url: "/trainings/ui-ux",
+    },
+    {
+      icon: <Globe className="w-10 h-10 text-orange-500" />,
+      title: "Digital Marketing & SEO",
+      desc: "Master digital marketing strategies, SEO, and social media campaigns to boost brand visibility.",
+      bg: "bg-orange-100",
+      url: "/trainings/digital-marketing",
     },
     {
       icon: <Users className="w-10 h-10 text-orange-500" />,

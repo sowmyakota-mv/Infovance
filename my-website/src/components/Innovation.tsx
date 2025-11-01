@@ -99,7 +99,7 @@ export default function InnovationHero() {
           <p className="text-gray-700 text-lg max-w-2xl mx-auto mb-8">
             At Infovance, innovation isn’t just a buzzword - it’s the foundation of how we create, transform, and inspire progress across industries.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-6 py-3">
+          <button onClick={()=>navigate("/trainings")} className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-6 py-3">
             Explore Our Technologies
           </button>
         </ScrollAnimation>

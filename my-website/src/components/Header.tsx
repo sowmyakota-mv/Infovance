@@ -19,6 +19,10 @@ const navLinks: NavItem[] = [
       { title: "Full Stack Development", href: "trainings/full-stack-development" },
       { title: "AI & Machine Learning", href: "trainings/ai-ml" },
       { title: "Data Analytics & Power BI", href: "trainings/data-analytics" },
+      { title: "Cloud Computing & DevOps", href: "trainings/cloud-devops" },
+      { title: "Cybersecurity Fundamentals", href: "trainings/cybersecurity" },
+      { title: "UI/UX Design Masterclass", href: "trainings/ui-ux" },
+      { title: "Digital Marketing & SEO", href: "trainings/digital-marketing" },
       { title: "Corporate Upskilling", href: "trainings/corporate-upskilling" },
       { title: "Graduate Internship", href: "trainings/graduate-internship" },
       { title: "Career Accelerator", href: "trainings/career-accelerator" },
@@ -131,8 +135,13 @@ const Header: React.FC = () => {
 
       {/* ===== Mobile Menu ===== */}
       {menuOpen && (
-  <div className="absolute top-full left-0 w-full bg-white shadow-md px-6 py-4 flex flex-col space-y-3 md:hidden">
-    {navLinks.map((link) => (
+  <div
+    className="absolute top-full left-0 w-full bg-white shadow-md px-6 py-4 flex flex-col space-y-1 md:hidden overflow-y-auto"
+    style={{
+      maxHeight: "80vh", // allow scroll for tall dropdowns
+      WebkitOverflowScrolling: "touch", // smooth scrolling on iOS
+    }}>
+{navLinks.map((link) => (
       <div key={link.title}>
         {/* Main Mobile Link */}
         <div
