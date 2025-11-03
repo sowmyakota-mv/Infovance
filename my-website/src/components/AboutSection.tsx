@@ -23,7 +23,7 @@ const AboutSection: React.FC = () => {
         {/* About Title */}
         <div>
             <ScrollAnimation delay={500}>
-          <h4 className="text-orange-500 font-semibold uppercase tracking-wide">
+          <h4 className="text-orange-500  font-semibold uppercase tracking-wide">
             About Infovance
           </h4></ScrollAnimation>
           <ScrollAnimation delay={700}>

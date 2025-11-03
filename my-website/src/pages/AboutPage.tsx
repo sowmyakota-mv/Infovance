@@ -52,7 +52,7 @@ const About = () => {
         {/* Animated Heading and Paragraph */}
         <div className="relative z-[3] px-6">
           <h1
-            className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-wide flex flex-wrap justify-center"
+            className="text-4xl md:text-7xl font-extrabold text-white mb-6 tracking-wide flex flex-wrap justify-center"
             style={{ fontFamily: "'PT Serif', serif" }}
           >
             {title.split("").map((letter, i) => (
@@ -69,20 +69,23 @@ const About = () => {
             ))}
           </h1>
 
-          <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-200 leading-relaxed">
-            {paragraph.split("").map((letter, i) => (
-  <span
-    key={i}
-    className="inline-block opacity-0"
-    style={{
-      animation: animate ? `fadeIn 0.02s forwards` : "none",
-      animationDelay: animate ? `${i * 0.01}s` : "0s",
-    }}
-  >
-    {letter === " " ? "\u00A0" : letter}
-  </span>
-))}
-          </p>
+          <p
+  className="max-w-3xl mx-auto text-sm md:text-xl text-gray-200 leading-relaxed text-center"
+>
+  {paragraph.split(" ").map((word, i) => (
+    <span
+      key={i}
+      className="inline-block opacity-0 mr-1"
+      style={{
+        animation: animate ? `fadeIn 0.3s forwards` : "none",
+        animationDelay: animate ? `${i * 0.1}s` : "0s",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {word}
+    </span>
+  ))}
+</p>
         </div>
       </div>
 
@@ -92,7 +95,7 @@ const About = () => {
           <img
             src="/about-journey.jpg"
             alt="Our Story"
-            className="rounded-3xl shadow-lg w-90 h-[260px] object-cover ml-24"
+            className="rounded-3xl shadow-lg w-90 h-[260px] object-cover md:ml-24"
           />
           <ScrollAnimation delay={200}>
             <div>

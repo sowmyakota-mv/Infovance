@@ -60,10 +60,10 @@ export default function GraduateInternship() {
         {/* Animated Heading and Paragraph */}
         <div className="relative z-[3] px-6">
           <h1
-            className="text-5xl md:text-5xl font-extrabold text-white mt-72 tracking-wide flex flex-wrap justify-center"
+            className="text-3xl md:text-5xl font-extrabold text-white mt-72 tracking-wide flex flex-wrap justify-center"
             style={{ fontFamily: "'PT Serif', serif" }}
           >
-            {"Start Your Professional Journey with Infovance".split("").map((letter, i) => (
+            {"Start Your Professional  Journey with Infovance".split("").map((letter, i) => (
               <span
                 key={i}
                 className="inline-block opacity-0"

@@ -100,7 +100,7 @@ export default function UXUIDesignMasterclass() {
         <ScrollAnimation delay={400}>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Master the art of designing intuitive, user-centered digital
-            experiences — from research and wireframes to high-fidelity prototypes.
+            experiences  from research and wireframes to high-fidelity prototypes.
           </p>
         </ScrollAnimation>
 
