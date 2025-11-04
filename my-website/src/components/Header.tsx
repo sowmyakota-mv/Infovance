@@ -51,7 +51,7 @@ const Header: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white shadow-md">
+    <header className="fixed top-0 left-0 right-0 w-full z-50  bg-headerbg shadow-md">
       {/* Top Info Bar */}
       {/* <div className="w-full bg-orange-200 text-orange-900 text-sm px-4 md:px-10 py-2 flex justify-between items-center">
         <div className="flex flex-wrap items-center gap-3">
@@ -79,12 +79,12 @@ const Header: React.FC = () => {
       </div> */}
 
       {/* Main Navigation */}
-      <div className="w-full px-4 md:px-10 py-2 flex items-center justify-between bg-white">
+      <div className="w-full px-4 md:px-10 py-2 flex items-center justify-between">
   <Link to="/">
     <img 
       src="/Info-logos-2.png" 
       alt="Infovance Logo" 
-      className="h-24 md:h-24 w-32 object-contain"
+      className="h-24 md:h-24 w-24 rounded-full object-contain"
     />
   </Link>
 
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
             <div key={link.title} className="relative group">
               <Link
                 to={`/${link.href}`}
-                className={`px-3 py-1 rounded-full font-medium text-lg cursor-pointer transition-all duration-300 flex items-center gap-1 ${
+                className={`px-3 py-1 rounded-full text-white font-medium text-lg cursor-pointer transition-all duration-300 flex items-center gap-1 ${
                   activeLink === (link.href || "home")
                     ? "bg-orange-500 text-white"
                     : "text-orange-900 hover:bg-orange-100"
