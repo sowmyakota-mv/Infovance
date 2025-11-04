@@ -79,7 +79,7 @@ const Header: React.FC = () => {
       </div> */}
 
       {/* Main Navigation */}
-      <div className="w-full px-4 md:px-10 py-2 flex items-center justify-between">
+      <div className="w-full px-4 md:px-10 py-1 flex items-center justify-between">
   <Link to="/">
     <img 
       src="/Info-logos-2.png" 

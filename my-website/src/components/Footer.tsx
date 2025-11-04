@@ -10,23 +10,23 @@ const Footer: React.FC = () => {
         {/* ---------------- ROW 1: COMPANY INFO ---------------- */}
         <ScrollAnimation delay={200}>
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left">
-            <div className="flex items-center space-x-3 ml-8 -mt-8 ">
+            <div className="flex items-center space-x-3 ml-12 -mt-8 ">
               <img
-                src="/Info-logos-2.png"
+                src="/Info-logos.png"
                 alt="Infovance Logo"
-                className="h-24 w-24 rounded-full object-cover "
+                className="h-24  object-contain "
               />
-              <h2 className="text-5xl font-bold tracking-wide mb-2 md:mb-0">
+              {/* <h2 className="text-5xl font-bold tracking-wide mb-2 md:mb-0">
                 Infovance
-              </h2>
+              </h2> */}
             </div>
             <p className="text-gray-300 text-lg leading-snug max-w-4xl">
               Empowering businesses through innovation, strategy, and technology delivering
               transformative digital experiences that inspire growth and long-term impact
-              worldwide.{" "}
-              <a className="text-blue-300 hover:text-white font-semibold">
+              worldwide.
+              {/* <a className="text-blue-300 hover:text-white font-semibold">
                 Know More →
-              </a>
+              </a> */}
             </p>
           </div>
         </ScrollAnimation>
