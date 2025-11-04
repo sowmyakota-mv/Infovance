@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import {  Phone, MapPin, Send } from "lucide-react";
+import { Phone, MapPin, Send } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/bootstrap.css";
+import emailjs from "emailjs-com"; // ✅ Added import
 
 const Connect: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ const Connect: React.FC = () => {
   const [errors, setErrors] = useState({
     name: "",
     email: "",
-    phone: "",
+    // phone: "",
     message: "",
   });
 
@@ -42,22 +43,16 @@ const Connect: React.FC = () => {
     };
   }, []);
 
+  // ✅ Validation
   const validateForm = () => {
-    const newErrors = {
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    };
+    const newErrors = { name: "", email: "", message: "" };
     let isValid = true;
 
-    // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = "Full Name is required";
+      newErrors.name = "Name is required";
       isValid = false;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
       newErrors.email = "Email Address is required";
@@ -67,16 +62,6 @@ const Connect: React.FC = () => {
       isValid = false;
     }
 
-    // Phone validation
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Contact Number is required";
-      isValid = false;
-    } else if (formData.phone.length < 8) {
-      newErrors.phone = "Please enter a valid phone number";
-      isValid = false;
-    }
-
-    // Message validation
     if (!formData.message.trim()) {
       newErrors.message = "Message cannot be empty";
       isValid = false;
@@ -86,10 +71,39 @@ const Connect: React.FC = () => {
     return isValid;
   };
 
+  // ✅ Handle Form Submit with EmailJS
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      setIsSubmitted(true);
+      emailjs
+        .send(
+          "service_brmtotn", // 🔹 Replace with your EmailJS service ID
+          "template_1psyg2i", // 🔹 Replace with your EmailJS template ID
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            location: formData.location,
+            phone: formData.phone,
+            message: formData.message,
+          },
+          "xgIkpdkmS-jkAg6nD" // 🔹 Replace with your EmailJS public key
+        )
+        .then(
+          () => {
+            setIsSubmitted(true);
+            setFormData({
+              name: "",
+              email: "",
+              location: "",
+              phone: "",
+              message: "",
+            });
+          },
+          (error) => {
+            console.error("EmailJS Error:", error);
+            alert("Something went wrong. Please try again later.");
+          }
+        );
     }
   };
 
@@ -135,42 +149,56 @@ const Connect: React.FC = () => {
       </div>
 
       {/* 💠 3-COLUMN INFO SECTION */}
-      {/* 💠 3-COLUMN INFO SECTION */}
-<div className="w-[90%] md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 mt-16 md:mt-16">
+      <div className="w-[90%] md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 mt-16 md:mt-16">
+        {/* Location */}
+        <a
+          href="https://www.google.com/maps/place/Regus+-+Milton+Keynes+Atterbury+Lakes/@52.0517324,-0.7205236,15z/data=!3m2!4b1!5s0x4877ab2654cb230d:0x4cb88f3ef62e2e15!4m6!3m5!1s0x4877ab0d8503ba1f:0x3f0954f8ee335f91!8m2!3d52.0517206!4d-0.7020697!16s%2Fg%2F1tfjkn0q?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gray-100 w-[80%] ml-10 md:w-full md:ml-0 md:h-[80%] flex flex-col justify-center items-center text-center p-8 md:rounded-l-3xl shadow-md rounded-t-3xl md:rounded-r-none"
+        >
+          <MapPin className="w-10 h-10 text-teal-600 mb-4" />
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Our Location</h3>
+          <p className="text-gray-700 max-w-xs">
+            Regus, Milton Keynes, Atterbury Lakes, London, UK
+          </p>
+        </a>
 
-  {/* Location */}
-  <div className="bg-gray-100 w-[80%] ml-10 md:w-full md:ml-0 md:h-[80%] flex flex-col justify-center items-center text-center p-8 md:rounded-l-3xl shadow-md 
-                  rounded-t-3xl md:rounded-r-none">
-    <MapPin className="w-10 h-10 text-teal-600 mb-4" />
-    <h3 className="text-xl font-bold text-gray-900 mb-2">Our Location</h3>
-    <p className="text-gray-700 max-w-xs">
-      123 Infovance Tech Park, Hyderabad, India
-    </p>
-  </div>
+        {/* Center teal box */}
+        <div className="bg-teal-600 text-white flex flex-col justify-center items-center p-10 md:h-[100%] relative md:-top-4 shadow-lg z-10 rounded-3xl md:rounded-3xl">
+          <h3 className="text-2xl font-bold mb-4">Let’s Connect</h3>
+          <p className="text-lg max-w-md text-center leading-relaxed">
+            Whether you’re exploring collaboration, partnership, or career
+            opportunities - we’re just one message away.
+          </p>
+        </div>
 
-  {/* Center teal box */}
-  <div className="bg-teal-600 text-white flex flex-col justify-center items-center p-10 md:h-[100%] relative md:-top-4 shadow-lg z-10 
-                  rounded-3xl md:rounded-3xl">
-    <h3 className="text-2xl font-bold mb-4">Let’s Connect</h3>
-    <p className="text-lg max-w-md text-center leading-relaxed">
-      Whether you’re exploring collaboration, partnership, or career
-      opportunities - we’re just one message away.
-    </p>
-  </div>
-
-  {/* Contact Details */}
-  <div className="bg-gray-100 w-[80%] ml-10 md:w-full md:ml-0 md:h-[80%] flex flex-col justify-center items-center text-center p-8 md:rounded-r-3xl shadow-md 
-                  rounded-b-3xl md:rounded-b-none">
-    <Phone className="w-10 h-10 text-teal-600 mb-4" />
-    <h3 className="text-xl font-bold text-gray-900 mb-2">Contact Details</h3>
-    <p className="text-gray-700">
-      <strong>Email:</strong> info@infovance.com
-    </p>
-    <p className="text-gray-700">
-      <strong>Phone:</strong> +91 98765 43210
-    </p>
-  </div>
-</div>
+        {/* Contact Details */}
+        <div className="bg-gray-100 w-[80%] ml-10 md:w-full md:ml-0 md:h-[80%] flex flex-col justify-center items-center text-center p-8 md:rounded-r-3xl shadow-md rounded-b-3xl md:rounded-b-none">
+          <Phone className="w-10 h-10 text-teal-600 mb-4" />
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            Contact Details
+          </h3>
+          <p className="text-gray-700">
+            <strong>Email: </strong>
+            <a
+              href="mailto:info@infovance.com"
+              className="text-teal-600 hover:underline"
+            >
+              info@infovancesolutions.com
+            </a>
+          </p>
+          <p className="text-gray-700">
+            <strong>Phone: </strong>
+            <a
+              href="tel:+919876543210"
+              className="text-teal-600 hover:underline"
+            >
+              +44  75 444 76666
+            </a>
+          </p>
+        </div>
+      </div>
 
       {/* 💬 CONTACT FORM SECTION */}
       <div className="bg-white py-16 px-8 md:px-20">
@@ -179,7 +207,6 @@ const Connect: React.FC = () => {
             Send Us a Message
           </h2>
 
-          {/* ✅ Show Thank You Message instead of form */}
           {isSubmitted ? (
             <div className="bg-teal-50 border border-teal-200 rounded-3xl shadow-md p-12 text-center">
               <h3 className="text-3xl font-bold text-teal-700 mb-4">
@@ -192,11 +219,11 @@ const Connect: React.FC = () => {
             </div>
           ) : (
             <form className="space-y-6" onSubmit={handleSubmit}>
-              {/* Name + Email */}
+              {/* Full Name & Email */}
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-1">
                   <label className="block text-left text-sm font-semibold text-gray-800 mb-2">
-                    Full Name <span className="text-red-500">*</span>
+                    Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -235,7 +262,7 @@ const Connect: React.FC = () => {
                 </div>
               </div>
 
-              {/* Location + Phone */}
+              {/* Location & Phone */}
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-1">
                   <label className="block text-left text-sm font-semibold text-gray-800 mb-2">
@@ -254,7 +281,7 @@ const Connect: React.FC = () => {
 
                 <div className="flex-1">
                   <label className="block text-left text-sm font-semibold text-gray-800 mb-2">
-                    Contact Number <span className="text-red-500">*</span>
+                    Contact Number
                   </label>
                   <PhoneInput
                     country={"gb"}
@@ -269,11 +296,6 @@ const Connect: React.FC = () => {
                     placeholder="Enter your phone number"
                     enableSearch={true}
                   />
-                  {errors.phone && (
-                    <p className="text-red-500 text-sm mt-1 text-left">
-                      {errors.phone}
-                    </p>
-                  )}
                 </div>
               </div>
 

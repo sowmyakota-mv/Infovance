@@ -79,10 +79,14 @@ const Header: React.FC = () => {
       </div> */}
 
       {/* Main Navigation */}
-      <div className="w-full px-4 md:px-10 py-4 flex items-center justify-between bg-white">
-        <Link to="/">
-          <div className="text-2xl md:text-3xl font-bold text-orange-900">Infovance</div>
-        </Link>
+      <div className="w-full px-4 md:px-10 py-2 flex items-center justify-between bg-white">
+  <Link to="/">
+    <img 
+      src="/Info-logos-2.png" 
+      alt="Infovance Logo" 
+      className="h-24 md:h-24 w-32 object-contain"
+    />
+  </Link>
 
         {/* ===== Desktop Menu ===== */}
         <nav className="hidden md:flex space-x-4 relative">
